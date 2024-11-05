@@ -1,0 +1,16 @@
+Initial Linked list: 10 -> 20 -> 30 -> 40 -> 50 -> NULL
+
+Inserting 5 at the beginning:
+Linked list: 5 -> 10 -> 20 -> 30 -> 40 -> 50 -> NULL
+
+Inserting 60 at the end:
+Linked list: 5 -> 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> NULL
+
+Deleting node with value 30:
+Linked list: 5 -> 10 -> 20 -> 40 -> 50 -> 60 -> NULL
+
+Deleting node with value 5 (beginning):
+Linked list: 10 -> 20 -> 40 -> 50 -> 60 -> NULL
+
+Deleting node with value 60 (end):
+Linked list: 10 -> 20 -> 40 -> 50 -> NULL

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            gap: 10px; 
+            margin-top: 10px;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 45px;
+            align-items: left !important;
+            margin-left: 15px;
+        }
+
+        img {
+            width: 50px; 
+            height: 70px;
+            margin-left: 150px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            gap: 20px; 
+        }
+
+        .analysis-features {
+            background-color: #181818;
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%;
+            height: 75%;
+            max-width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            margin-left: 60px;
+            margin-right: 20px;
+        }
+
+        .container {
+            background-color: #282828;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            height: 80%;
+            max-width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+            margin-left: 20px;
+            margin-right: 60px;
+        }
+
+        .button1, .button2, .button3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            height: 50px;
+            text-align: center;
+            text-decoration: none; 
+        }
+
+        .button1 {
+            margin-top: 25%;
+        }
+        .button3 {
+            margin-bottom: 20%;
+        }
+        .button2 {
+            margin-top: 27px;
+            margin-bottom: 27px;
+        }
+
+        .button1:hover , .button2:hover, .button3:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdown-container {
+            margin-top: 10px;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+            margin-left: 50px;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: start !important;
+        }
+
+        .select {
+            width: 40%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .textbox {
+            width: 93%;
+            height: 400px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 15px;
+            margin-bottom: 10px;
+        }
+
+        .file-input-container {
+            display: none;
+            margin: 10px 50px;
+        }
+
+        .file-input-container input {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <img src="static/images/logo.png"> 
+        <h1>Code Analyzer</h1>
+    </div>
+
+    <div class="flex-container">
+        <div class="analysis-features">
+            <a href="/functionality" class="button1">Functionality</a>
+            <a href="/loopholes" class="button2">Loop Holes</a>
+            <a href="/optimization" class="button3">Optimization</a>
+        </div>
+        <div class="container">
+            <div class="dropdown-container">
+                <label for="fileInput" class="select">Choose File</label>
+                <input type="file" id="fileInput" accept=".py,.cpp,.c">
+
+            </div>
+
+            <textarea class="textbox" id="codeInput" placeholder="Code from the uploaded file">
+            </textarea>
+        </div>
+    </div>
+    <script>
+
+        // Handle file input change event
+        fileInput.addEventListener('change', function() {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    fileContent.textContent = event.target.result;
+                };
+                reader.readAsText(file);  // Read the file as text
+            } else {
+                fileContent.textContent = "No file selected";
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      position: relative;
+      z-index: 2;
+    }
+    .text-xl {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .space-x-4 > a {
+      margin-right: 16px;
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+    .space-x-4 > a:hover {
+      color: #ff5a5f;
+    }
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .btn-group {
+        flex-direction: row;
+        gap: 24px;
+      }
+    }
+    a.button {
+      display: block;
+      width: 192px;
+      padding: 12px 24px;
+      background-color: #ff5a5f;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    a.button:hover {
+      background-color: #ff7879;
+    }
+    .background-video {
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <video class="background-video" autoplay muted loop>
+    <source src="3130284-uhd_3840_2160_30fps.mp4" type="video/mp4">
+  </video>
+  <nav>
+    <div class="text-xl">Code AI</div>
+    <div class="space-x-4">
+      <a href="sign.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>WELCOME TO CODE AI</h1>
+    <div class="btn-group">
+      <a href="anal.html" class="button">Code Analyzer</a>
+      <a href="conv.html" class="button">Code Converter</a>
+    </div>
+  </main>
+</body>
+</html>
